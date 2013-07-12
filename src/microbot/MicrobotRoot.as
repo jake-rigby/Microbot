@@ -1,5 +1,7 @@
 package microbot
 {
+	import feathers.controls.ScreenNavigator;
+	import feathers.controls.ScreenNavigatorItem;
 	import feathers.themes.MetalWorksMobileTheme;
 	
 	import starling.display.Sprite;
@@ -15,6 +17,7 @@ package microbot
 		// feathers screens
 		private static const MAIN_MENU:String = "mainMenu";
 		private static const GAME_VIEW:String = "gameView";
+		private var nav:ScreenNavigator;
 		
 		
 		public function MicrobotRoot()
@@ -26,7 +29,26 @@ package microbot
 		
 		private function init(event:Event):void
 		{
-			var theme:MetalWorksMobileTheme;
+			// set up theme
+			var theme:MetalWorksMobileTheme = new MetalWorksMobileTheme(stage);
+			
+			// navigator component
+			nav = new ScreenNavigator();
+			addChild(nav);
+			
+			// setup a menu screen
+			var menu:ScreenNavigatorItem = new ScreenNavigatorItem(MainMenu, {optionSelected : onOptionSelected}, null);
+			nav.addScreen(MAIN_MENU, menu);
+			
+			// setup a game screen
+			var game:ScreenNavigatorItem = new ScreenNavigatorItem(MainMenu, {optionSelected : onOptionSelected}, null);
+			nav.addScreen(MAIN_MENU, menu);
+			
+		}
+		
+		private function onOptionSelected(event:Event, selectedItem:Object):void
+		{
+			
 		}
 	}
 }
