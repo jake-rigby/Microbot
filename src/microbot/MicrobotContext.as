@@ -1,4 +1,4 @@
-package
+package microbot
 {
 	import starling.display.DisplayObjectContainer;
 	
@@ -15,7 +15,6 @@ package
 		{
 			// stuff like ...
 			//commandMap.mapEvent(ContextEvent.STARTUP_COMPLETE, StartupCommand);
-			
 		}
 	}
 }
