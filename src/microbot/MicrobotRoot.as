@@ -17,8 +17,8 @@ package microbot
 		// feathers screens
 		private static const MAIN_MENU:String = "mainMenu";
 		private static const GAME_VIEW:String = "gameView";
-		private var nav:ScreenNavigator;
 		
+		private var nav:ScreenNavigator;
 		
 		public function MicrobotRoot()
 		{
