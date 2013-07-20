@@ -13,6 +13,9 @@ package microbot
 		
 		override protected function mappings():void
 		{
+			//commandMap.mapEvent(MicrobotEvent.START_GAME,StartGameCommand,MicrobotEvent);
+			
+			
 			// stuff like ...
 			//commandMap.mapEvent(ContextEvent.STARTUP_COMPLETE, StartupCommand);
 		}

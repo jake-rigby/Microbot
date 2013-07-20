@@ -41,14 +41,16 @@ package microbot
 			nav.addScreen(MAIN_MENU, menu);
 			
 			// setup a game screen
-			var game:ScreenNavigatorItem = new ScreenNavigatorItem(MainMenu, {optionSelected : onOptionSelected}, null);
-			nav.addScreen(MAIN_MENU, menu);
+			var game:ScreenNavigatorItem = new ScreenNavigatorItem(game, {optionSelected : onOptionSelected}, null);
+			nav.addScreen(GAME_VIEW, game);
+			
+			nav.showScreen(MAIN_MENU);
 			
 		}
 		
 		private function onOptionSelected(event:Event, selectedItem:Object):void
 		{
-			
+			trace(selectedItem.toString());
 		}
 	}
 }
